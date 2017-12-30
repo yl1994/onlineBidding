@@ -12,6 +12,7 @@
 /db/*.sqlite3-journal
 #过滤数据库配置文件
 config/database.yml
+Gemfile.lock
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
