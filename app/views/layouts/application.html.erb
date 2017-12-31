@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OnlineBidding</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>网上竞价项目</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="contain_nav">
+      <div class="container">
+        <div class="contain">
+          <!--头部代码开始-->
+          <%= render "/shared/head" %>
+          <%= render "shared/flash_msg" %>
+          <%= yield %>
+        </div><!-- end contain -->
+      </div> <!-- end container  -->
+      <%= render "/shared/foot" %>
+    </div> <!-- end contain_nav -->
+  </body>
 </html>

@@ -10,6 +10,32 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+ *= require home
  */
+
+ /*contain_nav*/
+ .contain_nav{
+   width: 100%;
+   background: red;
+ }
+ /*头部*/
+ .contain .head{
+  height: 40px;
+  line-height: 40px;
+  background: #d6d6e2;
+ }
+ .contain .head {
+  font-size: 14px;
+ }
+ .contain .head a{
+  font-size: 14px;
+  color: #131212;
+  text-decoration: none;
+ }
+ .contain .head a:hover{
+  color: #EB5424;
+ }
+ .head .session{
+  float:left;
+  padding-left: 10px;
+ }

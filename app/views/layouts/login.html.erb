@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>网上竞价项目</title>
+  <!--   <link rel="shortcut icon" href="/assets/sunny-period.png"> -->
+    <%= stylesheet_link_tag "login" %>
+    <%= javascript_include_tag "/javascripts/jquery_ujs.js"%>
+    <%= javascript_include_tag 'login'%>
+
+  </head>
+  <body>
+  <div class="login_body">
+  <!--头部代码开始-->
+  <div class="head" style="background: none;">
+    <div class="head_mid">
+      <a href="/">
+        <div class="logo_image title_png"></div>  
+      </a>
+    </div>
+  </div>
+  <!--头部代码结束-->
+
+  <%= yield %>
+
+
+  <div class="jianju_x"></div>
+    <%= render "/shared/foot" %>
+  </div>
+  </body>
+</html>

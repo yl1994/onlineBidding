@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="registration_box">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="field">
+         <%= f.input :loginname,placeholder: '用户名' %>
+      </div>
+
+      <div class="field">
+        <%= f.input :password,placeholder: '密码' %>
+      </div>
+
+      <div class="field">
+        <%= f.input :password_confirmation,placeholder: '确认密码',required: true  %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "立即注册" ,class: "sign_up"%>
+      </div>
+    <% end %>  
+  </div>
+  <div class="auth">
+    <label>已有账号？</label> <%= link_to '立即登录', new_user_session_path %>
+  </div>  
+</div>

@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 
 #注册登录
 gem 'devise'
+gem 'simple_form'
+gem 'pry-rails', '0.3.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

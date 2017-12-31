@@ -1,0 +1,37 @@
+<div id="login_main">
+  <div class="login_list log">
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <h1>用户登录</h1>
+      <div class="inputs">
+        <div class="item"><span class="red"><%= render "shared/flash_msg"%></span> </div>
+        <div class="item">
+          <%= f.label :loginname, class: 'control-label' %>
+          <%= f.text_field :loginname, :autofocus => true, class: 'base_input', placeholder: '用户名' %>
+        </div>
+        <div class="item">
+          <%= f.label :password, class: 'control-label' %>
+          <%= f.password_field :password, class: 'base_input' %>
+        </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="item">
+            <p class="remember">
+              <%= f.check_box :remember_me %>
+              <span class="vm">自动登录</span>
+            </p>
+            <p class="forgot">
+              <%= link_to "忘记密码?", new_password_path(resource_name) %> 
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <div class="item">
+        <%= f.button :submit, "登录", class: 'btn_submit' %>
+      </div>
+      <div class="coagent">
+        <%= link_to '立即注册', new_user_registration_path,class: "regist-link" %>   
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%#= render "devise/shared/links" %>

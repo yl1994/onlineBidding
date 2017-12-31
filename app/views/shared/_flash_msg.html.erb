@@ -1,0 +1,21 @@
+<% if flash.present? %>
+  <div id="tip_msg">
+    <% flash.each do |status, msg| %>
+      <% next unless [:error, :alert, :success].include?(status.to_sym) %>
+      <div class="alert alert-<%= status %> home_msg">
+       <div style="margin:0 auto;padding: 0px 15px;width:100%;">
+         <span><strong><%= flash_status_chn(status) %></strong><%= raw msg %></span>
+         <button type="button" class="close_tip_msg"></button>
+       </div>
+      </div>
+    <% end %>
+  </div>
+
+  <% if (flash.keys & ["error", "alert"]).blank? %>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#tip_msg').fadeOut(7000);
+      });
+    </script>
+  <% end -%>
+<% end -%>
