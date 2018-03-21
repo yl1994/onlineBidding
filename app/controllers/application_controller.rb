@@ -3,6 +3,4 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   layout 'application'
   protect_from_forgery with: :exception
-  # devise方法验证用户登陆
-  before_filter :authenticate_user!
 end
