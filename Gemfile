@@ -3,7 +3,7 @@ source 'https://gems.ruby-china.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
-gem 'puma',         '3.9.1'
+#gem 'puma',         '3.9.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
